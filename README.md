@@ -22,11 +22,28 @@
 │   └── plot_results.py
 └── docs/
     ├── final_report/
+    │   ├── report.pdf
+    │   ├── report.tex
+    │   └── act_figures/
     ├── experiment1_3d_assets/
+    │   ├── images/
+    │   ├── models/
+    │   └── videos/
     └── experiment2_act/
+        ├── figures/
+        ├── stats/
+        ├── results/
+        └── report.md
 ```
 
 `data/`、`runs/`、checkpoint、wandb 日志、模型权重和训练/验证/测试数据不提交到 GitHub。需要复现实验时按下面步骤在本地生成。
+
+材料目录说明：
+
+- `docs/final_report/`：最终报告 PDF、LaTeX 源文件和报告所需图片。
+- `docs/experiment1_3d_assets/`：题目一的交付模型、截图和渲染视频。
+- `docs/experiment2_act/`：题目二的实验记录、图表、统计文件和小型评估 JSON。
+- `scripts/`：题目二的数据准备、训练、测试和绘图脚本。
 
 ## Requirements
 
@@ -75,15 +92,6 @@ python -m pip install -r requirements.txt
 python scripts/download_calvin.py \
   --repo-id xiaoma26/calvin-lerobot \
   --output-dir data/calvin-lerobot
-```
-
-如果需要代理：
-
-```bash
-python scripts/download_calvin.py \
-  --repo-id xiaoma26/calvin-lerobot \
-  --output-dir data/calvin-lerobot \
-  --proxy http://127.0.0.1:7897
 ```
 
 转换数据格式、统一 LeRobot feature key，并合并 A+B+C：
@@ -182,6 +190,14 @@ python scripts/plot_results.py \
 ## Reported Results
 
 报告中的主要题目二结果保存在 `docs/experiment2_act/stats/` 和 `docs/experiment2_act/results/`。在 1000-step 快速训练预算下，环境 A 单域模型在环境 D 上的 Action L1 低于 A+B+C 多环境模型；报告中将其解释为多环境模型在短训练预算下仍处于欠训练状态，而不是多环境训练本身无效。
+
+## Model Weights
+
+模型权重和完整实验结果不提交到 GitHub，单独通过百度网盘提供：
+
+- 文件：实验结果与模型权重
+- 链接：https://pan.baidu.com/s/1Vxqe9ldj-p4FHISICwnSig
+- 提取码：mfkd
 
 ## GitHub Storage Policy
 

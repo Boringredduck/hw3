@@ -9,3 +9,5 @@
 - `results/`：环境 D zero-shot Action L1 评估 JSON
 
 ACT 训练代码在仓库根目录的 `scripts/` 下。数据集、checkpoint 和训练输出不放入本目录。
+
+模型权重和完整实验结果通过百度网盘提供：链接 https://pan.baidu.com/s/1Vxqe9ldj-p4FHISICwnSig，提取码 `mfkd`，文件名为“实验结果与模型权重”。
