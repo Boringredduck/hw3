@@ -1,0 +1,8 @@
+model,dataset_load,policy_setup,train_total,wall_total,sec_per_step,data_s_mean,smp/s_mean
+ACT env A,0s,2s,9m03s,9m05s,—,0.429,15.5
+ACT A+B+C,12m39s,2s,11m51s,24m32s,—,0.614,11.7
+
+eval_phase,duration,,,,,,
+act_envA,1m34s
+act_envABC,1m29s
+eval_total,3m03s

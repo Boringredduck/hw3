@@ -1,0 +1,78 @@
+{
+  "eval_mode": "quick_subset",
+  "max_episodes": 10,
+  "max_batches": 20,
+  "batch_size": 16,
+  "results": [
+    {
+      "n_samples": 320,
+      "action_dim": 7,
+      "mean_l1_total": 0.679047167301178,
+      "std_l1_total": 0.644294023513794,
+      "per_dim_mean_l1": [
+        0.877794623374939,
+        0.5599817633628845,
+        0.7448151707649231,
+        0.6703011989593506,
+        0.8328303098678589,
+        0.513710618019104,
+        0.5538962483406067
+      ],
+      "per_dim_std_l1": [
+        0.8247783184051514,
+        0.5054032802581787,
+        0.6440327167510986,
+        0.6841828227043152,
+        0.7683813571929932,
+        0.39012637734413147,
+        0.4689260423183441
+      ],
+      "dim_names": [
+        "x",
+        "y",
+        "z",
+        "roll",
+        "pitch",
+        "yaw",
+        "gripper"
+      ],
+      "model": "act_envA",
+      "checkpoint": "/home1/lixiang/ACT/work/outputs/act_envA/checkpoints/last/pretrained_model"
+    },
+    {
+      "n_samples": 320,
+      "action_dim": 7,
+      "mean_l1_total": 0.7450907826423645,
+      "std_l1_total": 0.6547040939331055,
+      "per_dim_mean_l1": [
+        0.973430335521698,
+        0.6048448085784912,
+        0.7163033485412598,
+        0.6780589818954468,
+        0.8560976982116699,
+        0.5568974614143372,
+        0.8300021886825562
+      ],
+      "per_dim_std_l1": [
+        0.8126288652420044,
+        0.5328664779663086,
+        0.6208688616752625,
+        0.6738452911376953,
+        0.7496165037155151,
+        0.3695133924484253,
+        0.6213372349739075
+      ],
+      "dim_names": [
+        "x",
+        "y",
+        "z",
+        "roll",
+        "pitch",
+        "yaw",
+        "gripper"
+      ],
+      "model": "act_envABC",
+      "checkpoint": "/home1/lixiang/ACT/work/outputs/act_envABC/checkpoints/last/pretrained_model"
+    }
+  ]
+}

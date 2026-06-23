@@ -1,0 +1,21 @@
+name: hw3-lerobot-act
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch
+  - torchvision
+  - pytorch-cuda=12.1
+  - numpy
+  - pandas
+  - pyarrow
+  - matplotlib
+  - tqdm
+  - packaging
+  - pip:
+      - lerobot
+      - huggingface_hub

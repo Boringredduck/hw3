@@ -1,0 +1,79 @@
+{
+  "philosophy": "minimal_fast_high_value",
+  "training": [
+    {
+      "log": "act_envA_run.log",
+      "events": {
+        "creating_dataset": "2026-06-22 16:41:17",
+        "creating_policy": "2026-06-22 16:41:17",
+        "training_ready": "2026-06-22 16:41:19",
+        "ckpt_500": "2026-06-22 16:45:53",
+        "ckpt_1000": "2026-06-22 16:50:13",
+        "end_training": "2026-06-22 16:50:22"
+      },
+      "seconds": {
+        "dataset_load": 0.0,
+        "policy_setup": 2.0,
+        "train_total": 543.0,
+        "train_steps_0_500": 274.0,
+        "train_steps_500_1000": 260.0,
+        "wall_total": 545.0
+      },
+      "sec_per_step": 0.543,
+      "model": "ACT env A",
+      "throughput": {
+        "data_s_mean": 0.4293,
+        "data_s_max": 0.484,
+        "samples_per_s_mean": 15.5
+      }
+    },
+    {
+      "log": "act_envABC_run.log",
+      "events": {
+        "creating_dataset": "2026-06-22 16:42:32",
+        "creating_policy": "2026-06-22 16:55:11",
+        "training_ready": "2026-06-22 16:55:13",
+        "ckpt_500": "2026-06-22 17:01:02",
+        "ckpt_1000": "2026-06-22 17:06:57",
+        "end_training": "2026-06-22 17:07:04"
+      },
+      "seconds": {
+        "dataset_load": 759.0,
+        "policy_setup": 2.0,
+        "train_total": 711.0,
+        "train_steps_0_500": 349.0,
+        "train_steps_500_1000": 355.0,
+        "wall_total": 1472.0
+      },
+      "sec_per_step": 0.711,
+      "model": "ACT A+B+C",
+      "throughput": {
+        "data_s_mean": 0.614,
+        "data_s_max": 0.726,
+        "samples_per_s_mean": 11.7
+      }
+    }
+  ],
+  "eval_quick": {
+    "log": "eval_envD_run.log",
+    "phases": [
+      {
+        "phase": "act_envA",
+        "seconds": 94.0
+      },
+      {
+        "phase": "act_envABC",
+        "seconds": 89.0
+      }
+    ],
+    "total_seconds": 183.0
+  },
+  "analyze_supplementary": {},
+  "experiment_budget_summary": {
+    "train_steps_per_model": 1000,
+    "train_models": 2,
+    "eval_quick_episodes": 10,
+    "eval_quick_batches": 20,
+    "note": "Supplementary evals in analyze_experiments.py use ~15-30 ep; see 06 doc"
+  }
+}

@@ -1,0 +1,25 @@
+2 题目一：基于3DGS与AIGC的多源资产生成与真实场景融合
+本任务是一个“全链路”的3D视觉挑战，要求你不仅能完成真实世界的3D重建，还
+能利用AIGC技术生成虚拟资产，并最终将它们在同一个3D场景中进行融合渲染。
+任务要求：
+1. 3D 资产准备：请使用不同的技术路径，准备以下三个独立的3D物体模型：
+• 物体A（真实多视角重建）：使用手机拍摄一个真实物体的环绕视频或多视
+角照片，利用COLMAP（https://github.com/colmap/colmap）提取位姿后，使用3DGaussianSplatting（3DGS）（https://github.com/graphdeco-inria/gaussian-splatting）
+重建该物体。
+• 物体B（文本到3D生成）：使用threestudio （https://github.com/threestudio-project/threestudio）框架，基于预训练的2D扩
+散模型与SDSLoss，仅通过一段文本Prompt 生成一个3D虚拟物体。
+• 物体C（单图到 3D 生成）：使用手机拍摄一张真实物体的2D照片（生
+成前手工或使用大模型对图片去处背景，以获得纯净的前景物体），结合
+Zero123（https://github.com/threestudio-project/threestudio#stable-zero123） 将其生成为完整的 3D 模型。
+2. 背景场景重建：从开源 3D 数据集（如 Mip-NeRF 360（https://jonbarron.info/mipnerf360/）数据集中的 garden,
+bicycle, counter 等）中选择一个场景，使用 3DGS 算法进行重建，将其作为
+本次任务的统一环境背景。
+3. 场景融合与渲染：将步骤1中准备好的三个物体（A,B,C）以合理的比例、空
+间位置“插入”到步骤2重建的背景场景中。并生成一段多视角漫游渲染视频。
+4. 质量评估与技术报告：
+• 对比“多视角重建”、“文本生成”与“单图生成”三种方式在几何准确度、
+纹理细节、计算耗时上的差异。
+• 由于threestudio 生成的资产往往是隐式场或 Mesh，而背景是显式的高斯
+球（3DGS），请在报告中详细阐述你是如何统一表达形式并实现合并渲染
+的（例如：将AIGC模型导出为带纹理的Mesh后在Blender 中结合，或
+将生成的模型采样为点云并转换为高斯球完成代码级拼接）
